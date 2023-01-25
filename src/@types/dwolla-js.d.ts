@@ -2,7 +2,7 @@ import type { MaybePromise } from './utils';
 
 export interface CommonOptions {
   environment: 'production' | 'sandbox';
-  error: <T = unknown>(err: T) => MaybePromise<void>;
+  error: <TError = unknown>(err: TError) => MaybePromise<void>;
   styles?: string;
   success: <TResponse = unknown>(event: SuccessEvent<TResponse>) => MaybePromise<void>;
 }
