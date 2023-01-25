@@ -1,51 +1,53 @@
-import type { DwollaWeb } from './component-attributes';
+import {
+  BalanceDisplayAttributes,
+  BeneficialOwnersAttributes,
+  BusinessVCRAttributes,
+  ClientAccountOpeningAttributes,
+  CreateCustomerAttributes,
+  DocumentUploadAttributes,
+  PayInAttributes,
+  PersonalVCRAttributes,
+  UpdateCustomerAttributes
+} from './component-attributes';
+
 import type { DetailedHTMLProps } from 'react';
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
       'dwolla-balance-display': DetailedHTMLProps<
-        DwollaWeb.Attributes.BalanceDisplayAttributes<HTMLElement>,
+        BalanceDisplayAttributes<HTMLElement>,
         HTMLElement
       >;
 
       'dwolla-beneficial-owners': DetailedHTMLProps<
-        DwollaWeb.Attributes.BeneficialOwnersAttributes<HTMLElement>,
+        BeneficialOwnersAttributes<HTMLElement>,
         HTMLElement
       >;
 
-      'dwolla-business-vcr': DetailedHTMLProps<
-        DwollaWeb.Attributes.BusinessVCRAttributes<HTMLElement>,
-        HTMLElement
-      >;
+      'dwolla-business-vcr': DetailedHTMLProps<BusinessVCRAttributes<HTMLElement>, HTMLElement>;
 
       'dwolla-client-creation': DetailedHTMLProps<
-        DwollaWeb.Attributes.ClientAccountOpeningAttributes<HTMLElement>,
+        ClientAccountOpeningAttributes<HTMLElement>,
         HTMLElement
       >;
 
       'dwolla-customer-create': DetailedHTMLProps<
-        DwollaWeb.Attributes.CreateCustomerAttributes<HTMLElement>,
+        CreateCustomerAttributes<HTMLElement>,
         HTMLElement
       >;
 
       'dwolla-document-upload': DetailedHTMLProps<
-        DwollaWeb.Attributes.DocumentUploadAttributes<HTMLElement>,
+        DocumentUploadAttributes<HTMLElement>,
         HTMLElement
       >;
 
-      'dwolla-payin': DetailedHTMLProps<
-        DwollaWeb.Attributes.PayInAttributes<HTMLElement>,
-        HTMLElement
-      >;
+      'dwolla-payin': DetailedHTMLProps<PayInAttributes<HTMLElement>, HTMLElement>;
 
-      'dwolla-personal-vcr': DetailedHTMLProps<
-        DwollaWeb.Attributes.PersonalVCRAttributes<HTMLElement>,
-        HTMLElement
-      >;
+      'dwolla-personal-vcr': DetailedHTMLProps<PersonalVCRAttributes<HTMLElement>, HTMLElement>;
 
       'dwolla-customer-update': DetailedHTMLProps<
-        DwollaWeb.Attributes.UpdateCustomerAttributes<HTMLElement>,
+        UpdateCustomerAttributes<HTMLElement>,
         HTMLElement
       >;
     }
