@@ -1,4 +1,4 @@
-import type { DwollaWeb } from './components';
+import type { DwollaWeb } from './component-attributes';
 import type { DetailedHTMLProps } from 'react';
 
 declare global {
