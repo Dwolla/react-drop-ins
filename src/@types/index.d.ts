@@ -27,7 +27,7 @@ declare global {
 
       'dwolla-business-vcr': DetailedHTMLProps<BusinessVCRAttributes<HTMLElement>, HTMLElement>;
 
-      'dwolla-client-creation': DetailedHTMLProps<
+      'dwolla-account-opening': DetailedHTMLProps<
         ClientAccountOpeningAttributes<HTMLElement>,
         HTMLElement
       >;

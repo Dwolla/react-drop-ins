@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DwollaPersonalVCR 1`] = `<dwolla-customer-create />`;
+
+exports[`with optional props 1`] = `
+<dwolla-customer-create
+  correlationId="123abc"
+  customerId="123"
+  email="janedoe@email.com"
+  firstName="Jane"
+  ipAddress="255.255.255.255"
+  lastName="Doe"
+  privacy="www.yourprivacy.com"
+  terms="www.yourterms.com"
+/>
+`;

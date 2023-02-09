@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DwollaCustomerUpdate 1`] = `
+<dwolla-customer-update
+  customerId="123"
+/>
+`;
+
+exports[`with optional props 1`] = `
+<dwolla-customer-update
+  correlationId="123abc"
+  customerId="123"
+  email="janedoe@email.com"
+  firstName="Jane"
+  ipAddress="255.255.255.255"
+  lastName="Doe"
+  privacy="www.yourprivacy.com"
+  terms="www.yourterms.com"
+/>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DwollaClientCreate 1`] = `<dwolla-account-opening />`;
+
+exports[`with optional props 1`] = `
+<dwolla-account-opening
+  clientAccountId="123"
+  correlationId="123abc"
+  email="janedoe@email.com"
+  firstName="Jane"
+  hideDBAField={true}
+  ipAddress="255.255.255.255"
+  lastName="Doe"
+  privacy="www.yourprivacy.com"
+  terms="www.yourterms.com"
+  website="www.yourwebsite.com"
+/>
+`;
