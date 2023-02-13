@@ -1,0 +1,40 @@
+name: Lint
+
+on:
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v3
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 7
+
+      - name: Get pnpm Store Directory
+        id: pnpm-cache
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Setup pnpm Cache
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Run Linter Checks
+        run: pnpm checks
