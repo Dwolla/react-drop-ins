@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DwollaPersonalVCR 1`] = `<dwolla-customer-create />`;
+exports[`DwollaPersonalVCR 1`] = `<dwolla-personal-vcr />`;
 
 exports[`with optional props 1`] = `
-<dwolla-customer-create
+<dwolla-personal-vcr
   correlationId="123abc"
   customerId="123"
   email="janedoe@email.com"

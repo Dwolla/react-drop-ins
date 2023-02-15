@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DwollaPayIn 1`] = `
-<dwolla-customer-create
+<dwolla-payin
   blob=""
   customerId="123"
   token=""
@@ -9,7 +9,7 @@ exports[`DwollaPayIn 1`] = `
 `;
 
 exports[`with optional props 1`] = `
-<dwolla-customer-create
+<dwolla-payin
   amount={10}
   blob=""
   customerId="123"
