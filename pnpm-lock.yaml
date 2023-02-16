@@ -6,6 +6,7 @@ specifiers:
   '@types/node': ^16.18.11
   '@types/react': ^18.0.26
   '@types/react-dom': ^18.0.10
+  '@types/react-test-renderer': ^18.0.0
   '@typescript-eslint/eslint-plugin': ^5.48.2
   '@typescript-eslint/parser': ^5.48.2
   eslint: ^8.32.0
@@ -20,6 +21,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-script-hook: ^1.7.2
+  react-test-renderer: ^18.2.0
   rimraf: ^4.1.2
   ts-jest: ^29.0.5
   typescript: ^4.9.4
@@ -30,6 +32,7 @@ devDependencies:
   '@types/node': 16.18.11
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
+  '@types/react-test-renderer': 18.0.0
   '@typescript-eslint/eslint-plugin': 5.49.0_iu322prlnwsygkcra5kbpy22si
   '@typescript-eslint/parser': 5.49.0_7uibuqfxkfaozanbtbziikiqje
   eslint: 8.32.0
@@ -44,6 +47,7 @@ devDependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-script-hook: 1.7.2_biqbaboplfbrettd7655fr4n2y
+  react-test-renderer: 18.2.0_react@18.2.0
   rimraf: 4.1.2
   ts-jest: 29.0.5_xnqx6kewz4og5i3pgc6ahzwloy
   typescript: 4.9.4
@@ -859,6 +863,12 @@ packages:
 
   /@types/react-dom/18.0.10:
     resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
+    dependencies:
+      '@types/react': 18.0.27
+    dev: true
+
+  /@types/react-test-renderer/18.0.0:
+    resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
     dependencies:
       '@types/react': 18.0.27
     dev: true
@@ -3723,6 +3733,27 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: true
+
+  /react-shallow-renderer/16.15.0_react@18.2.0:
+    resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      object-assign: 4.1.1
+      react: 18.2.0
+      react-is: 18.2.0
+    dev: true
+
+  /react-test-renderer/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-JWD+aQ0lh2gvh4NM3bBM42Kx+XybOxCpgYK7F8ugAlpaTSnWsX+39Z4XkOykGZAHrjwwTZT3x3KxswVWxHPUqA==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      react: 18.2.0
+      react-is: 18.2.0
+      react-shallow-renderer: 16.15.0_react@18.2.0
+      scheduler: 0.23.0
     dev: true
 
   /react/18.2.0:

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DwollaBalanceDisplay 1`] = `
+<dwolla-balance-display
+  customerId="123"
+/>
+`;
+
+exports[`with optional props 1`] = `
+<dwolla-balance-display
+  customerId="123"
+  hideZeroBalance={true}
+/>
+`;

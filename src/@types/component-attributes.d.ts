@@ -5,7 +5,7 @@ export interface ClientAccountOpeningAttributes<T>
     WithCorrelation,
     WithPersonalInformation,
     WithPrivacyAndTerms {
-  clientAccountId: string;
+  clientAccountId?: string;
   hideDBAField?: boolean;
   website?: string;
 }
@@ -45,6 +45,7 @@ export interface PayInAttributes<T> extends HTMLAttributes<T>, WithCustomer {
 
 export interface PersonalVCRAttributes<T>
   extends HTMLAttributes<T>,
+    WithCorrelation,
     WithPersonalInformation,
     WithPrivacyAndTerms {
   customerId?: string;
