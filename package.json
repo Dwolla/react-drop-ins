@@ -25,8 +25,8 @@
     "format:fix": "pnpm _prettier --write",
     "lint:check": "pnpm _eslint",
     "lint:fix": "pnpm _eslint --fix",
-    "test": "jest",
-    "test:watch": "jest --clearCache && jest --watch",
+    "test": "jest --clearCache && jest --watch",
+    "test:ci": "jest --clearCache && jest --ci",
     "prepare": "husky install"
   },
   "peerDependencies": {

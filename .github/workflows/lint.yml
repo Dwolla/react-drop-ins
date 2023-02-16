@@ -4,9 +4,9 @@ on:
   - pull_request
 
 jobs:
-  lint:
+  lint_and_test:
     runs-on: ubuntu-latest
-    name: Lint
+    name: Lint + Test
     steps:
       - name: Checkout Git Repository
         uses: actions/checkout@v3
@@ -38,3 +38,6 @@ jobs:
 
       - name: Run Linter Checks
         run: pnpm checks
+
+      - name: Run  Tests
+        run: pnpm test:ci
