@@ -1,9 +1,9 @@
-import React from 'react';
 import type { FC } from 'react';
 import useScript from 'react-script-hook';
-import type { DwollaWebOptions } from './useDwollaWeb';
-import { useDwollaWeb } from './useDwollaWeb';
 import { render, screen } from '@testing-library/react';
+
+import { useDwollaWeb } from '../useDwollaWeb';
+import type { DwollaWebOptions } from '../useDwollaWeb';
 
 // Mock useScript hook to avoid making network requests
 jest.mock('react-script-hook');
