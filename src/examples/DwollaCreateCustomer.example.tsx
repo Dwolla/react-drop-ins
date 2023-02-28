@@ -1,14 +1,16 @@
 // Description: Example showing usage of the DwollaCustomerCreate component
 
 // Import the useDwollaWeb hook and the DwollaCustomerCreate component
-import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
-import DwollaCustomerCreate from '../components/DwollaCustomerCreate';
+
+// @ts-ignore
+import { DwollaCustomerCreate, DwollaWebOptions, useDwollaWeb } from 'react-drop-ins';
 
 // Create a functional component
 const DwollaCustomerCreateExample = () => {
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {
     environment: 'sandbox',
+    // styles: "/styles/create-custom.css", <- Custom CSS file that is publicly hosted so the drop-in can access it
     onError: function error() {
       console.log('Error');
     },
@@ -16,6 +18,8 @@ const DwollaCustomerCreateExample = () => {
       console.log('Success');
     },
     tokenUrl: '/yourTokenUrl'
+    // token: (req) => Promise.resolve(dwollaAPIToken()) <- You can specify a token instead of using a tokenUrl
+    // For more info: https://developers.dwolla.com/guides/drop-ins/generate-client-token
   };
 
   // Initialize the useDwollaWeb hook
