@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { ClientAccountOpeningAttributes } from '../@types/component-attributes';
+import type { ClientAccountOpeningAttributes } from '../@types/component-attributes';
 
 const DwollaClientCreate: FC<ClientAccountOpeningAttributes<any>> = (props) => {
   return <dwolla-account-opening {...props} />;
