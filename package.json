@@ -16,7 +16,7 @@
   "homepage": "https://github.com/Dwolla/react-drop-ins",
   "scripts": {
     "_eslint": "eslint \"src/**/*.{ts,tsx}\"",
-    "_prettier": "prettier \"src/**/*.{ts,tsx}\"",
+    "_prettier": "prettier *.md \"src/**/*.{ts,tsx}\"",
     "build": "tsc -p tsconfig.json",
     "checks": "pnpm format:check && pnpm lint:check",
     "clean": "rimraf build bundle",

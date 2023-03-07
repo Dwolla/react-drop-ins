@@ -78,14 +78,16 @@ export default App;
 
 ### Configuration options for `useDwollaWeb`
 
-| Parameter   | Type     | Description                                                                                                                                                                                         |
-| ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| environment | string   | Acceptable values of: `sandbox` or `production`                                                                                                                                                     |
-| styles      | string   | Optional. A relative or absolute URL linking to a hosted stylesheet containing component styles.                                                                                                    |
-| token       | function | A function that gets called by the component for fetching client-tokens as needed throughout the flow. <br /> Example usage: `token: (req) => Promise.resolve(dwollaAPIToken(req, {blah: "abcd"}))` |
-| tokenUrl    | function | A URL pointing to a server-side endpoint that can be used to generate client-token. <br /> Example usage: `tokenUrl: "tokenUrl"`                                                                    |
-| success     | function | A function that gets called upon a successful request from the Component.                                                                                                                           |
-| error       | function | A function that gets called when an error occurs in the Component.                                                                                                                                  |
+| Parameter   | Type     | Required? | Description                                                                                                                                                                                         |
+| ----------- | -------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| environment | string   | yes | Acceptable values of: `sandbox` or `production`                                                                                                                                                     |
+| styles      | string   | no | Optional. A relative or absolute URL linking to a hosted stylesheet containing component styles.                                                                                                    |
+| token       | function | conditional | A function that gets called by the component for fetching client-tokens as needed throughout the flow. <br /> Example usage: `token: (req) => Promise.resolve(dwollaAPIToken(req, {blah: "abcd"}))` <br /> Not required if `tokenUrl` is used. |
+| tokenUrl    | function | conditional | A URL pointing to a server-side endpoint that can be used to generate client-token. <br /> Example usage: `tokenUrl: "tokenUrl"`. <br /> Not required if `token` is used.                                                                   |
+| success     | function | no |  A function that gets called upon a successful request from the Component.                                                                                                                           |
+| error       | function | no |  A function that gets called when an error occurs in the Component.                                                                                                                                  |
+
+**Note:** You can use either `token` or `tokenUrl` in the config options for generating a client token, but not both. Check out the [tokenUrl vs token configuration](https://developers.dwolla.com/guides/drop-ins/generate-client-token#token-url-vs-token-configuration) section in the docs for more information on the differences between the two.
 
 ## Examples
 
