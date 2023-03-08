@@ -1,12 +1,30 @@
-// Description: Example showing usage of the DwollaCustomerCreate component
-
-// Import the useDwollaWeb hook and the DwollaCustomerCreate component
 import type { DwollaWebOptions } from '../useDwollaWeb';
 import { useDwollaWeb } from '../useDwollaWeb';
 import DwollaCustomerCreate from '../components/DwollaCustomerCreate';
 
-// Create a functional component
-const DwollaCustomerCreateExample = () => {
+export default {
+  title: 'Drop-ins/DwollaCustomerCreate',
+  component: DwollaCustomerCreate,
+  parameters: {
+    // mocking the call to the /yourTokenUrl endpoint that the component makes to the API multiple times during it's lifecycle
+    mockData: [
+      {
+        url: '/yourTokenUrl',
+        method: 'POST',
+        status: 200,
+        response: {
+          token: 'some-token'
+        }
+      }
+    ]
+  }
+};
+
+export const Default = () => {
+  // import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
+  // import DwollaCustomerCreate from '../components/DwollaCustomerCreate';
+  // TODO: Update imports after publishing to NPM
+
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {
     environment: 'sandbox',
@@ -33,17 +51,8 @@ const DwollaCustomerCreateExample = () => {
 
   // Render the DwollaCustomerCreate component when ready
   return (
-    <>
-      {/* Calling DwollaCustomerCreate component with available optional attributes*/}
-      <DwollaCustomerCreate
-        firstName="Jane"
-        lastName="Doe"
-        isBusiness
-        businessName="Some Business"
-        correlationId="123abc"
-      />
-    </>
+    <div style={{ width: '470px' }}>
+      <DwollaCustomerCreate firstName="John" lastName="Doe" type="receive-only" />
+    </div>
   );
 };
-
-export default DwollaCustomerCreateExample;

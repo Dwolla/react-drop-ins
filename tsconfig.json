@@ -11,11 +11,11 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "resolveJsonModule": true,
-    "skipLibCheck": true,
     "isolatedModules": true,
+    "noImplicitAny": false,
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
   "include": ["src/**/*"],
-  "exclude": [ "bundle", "node_modules"]
+  "exclude": ["bundle", "node_modules"]
 }

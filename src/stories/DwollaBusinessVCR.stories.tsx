@@ -1,12 +1,30 @@
-// Description: Example showing usage of the DwollaCustomerCreate component
-
-// Import the useDwollaWeb hook and the DwollaCustomerCreate component
 import type { DwollaWebOptions } from '../useDwollaWeb';
 import { useDwollaWeb } from '../useDwollaWeb';
-import DwollaCustomerCreate from '../components/DwollaCustomerCreate';
+import DwollaBusinessVCR from '../components/DwollaBusinessVCR';
 
-// Create a functional component
-const DwollaCustomerCreateExample = () => {
+export default {
+  title: 'Drop-ins/DwollaBusinessVCR',
+  component: DwollaBusinessVCR,
+  parameters: {
+    // mocking the call to the /yourTokenUrl endpoint that the component makes to the API multiple times during it's lifecycle
+    mockData: [
+      {
+        url: '/yourTokenUrl',
+        method: 'POST',
+        status: 200,
+        response: {
+          token: 'some-token'
+        }
+      }
+    ]
+  }
+};
+
+export const Default = () => {
+  // import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
+  // import DwollaBusinessVCR from '../components/DwollaBusinessVCR';
+  // TODO: Update imports after publishing to NPM
+
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {
     environment: 'sandbox',
@@ -31,19 +49,16 @@ const DwollaCustomerCreateExample = () => {
   // Handle errors
   if (error) return <div>Error</div>;
 
-  // Render the DwollaCustomerCreate component when ready
+  // Render the DwollaBusinessVCR component when ready
   return (
-    <>
-      {/* Calling DwollaCustomerCreate component with available optional attributes*/}
-      <DwollaCustomerCreate
+    <div style={{ width: '470px' }}>
+      <DwollaBusinessVCR
         firstName="Jane"
         lastName="Doe"
-        isBusiness
-        businessName="Some Business"
-        correlationId="123abc"
+        email="jane.doe@email.com"
+        privacy="www.yourprivacy.com"
+        terms="www.yourterms.com"
       />
-    </>
+    </div>
   );
 };
-
-export default DwollaCustomerCreateExample;
