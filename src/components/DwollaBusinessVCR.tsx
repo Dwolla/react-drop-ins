@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import type { BusinessVCRAttributes } from '../@types/component-attributes';
+import type { BusinessVCRProps } from '../types/component-props';
 
-const DwollaBusinessVCR: FC<BusinessVCRAttributes<any>> = (props) => {
+const DwollaBusinessVCR: FC<BusinessVCRProps> = (props) => {
   return <dwolla-business-vcr {...props} />;
 };
 

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import type { PayInAttributes } from '../@types/component-attributes';
+import type { PayInProps } from '../types/component-props';
 
-const DwollaPayIn: FC<PayInAttributes<any>> = (props) => {
+const DwollaPayIn: FC<PayInProps> = (props) => {
   return <dwolla-payin {...props} />;
 };
 
