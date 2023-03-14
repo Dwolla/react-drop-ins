@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { PersonalVCRAttributes } from '../@types/component-attributes';
+import type { PersonalVCRProps } from '../types/component-props';
 
-const DwollaPersonalVCR: FC<PersonalVCRAttributes<any>> = (props) => {
+const DwollaPersonalVCR: FC<PersonalVCRProps> = (props) => {
   return <dwolla-personal-vcr {...props} />;
 };
 

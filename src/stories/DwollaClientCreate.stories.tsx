@@ -1,4 +1,5 @@
-import { useDwollaWeb, DwollaWebOptions } from '../useDwollaWeb';
+import type { DwollaWebOptions } from '../useDwollaWeb';
+import { useDwollaWeb } from '../useDwollaWeb';
 import DwollaClientCreate from '../components/DwollaClientCreate';
 
 export default {

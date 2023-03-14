@@ -1,4 +1,5 @@
-import { useDwollaWeb, DwollaWebOptions } from '../useDwollaWeb';
+import type { DwollaWebOptions } from '../useDwollaWeb';
+import { useDwollaWeb } from '../useDwollaWeb';
 import DwollaBalanceDisplay from '../components/DwollaBalanceDisplay';
 
 const CUSTOMER_ID = 'dwolla-customer-uuid';

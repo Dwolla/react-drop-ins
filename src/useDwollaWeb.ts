@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import useScript from 'react-script-hook';
 import { DWOLLA_WEB_STABLE_URL as URL } from './constants';
-import type { CommonOptions, OptionsWithToken, OptionsWithTokenUrl } from './@types/dwolla-js';
-import type { Rename } from './@types/utils';
+import type { CommonOptions, OptionsWithToken, OptionsWithTokenUrl } from './types/dwolla-js';
+import type { Rename } from './types/utils';
 
 /*
 Pick all properties from CommonOptions except 'error' and 'success'.

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { BalanceDisplayAttributes } from '../@types/component-attributes';
+import type { BalanceDisplayProps } from '../types/component-props';
 
-const DwollaBalanceDisplay: FC<BalanceDisplayAttributes<any>> = (props) => {
+const DwollaBalanceDisplay: FC<BalanceDisplayProps> = (props) => {
   return <dwolla-balance-display {...props} />;
 };
 

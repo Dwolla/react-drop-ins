@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { CreateCustomerAttributes } from '../@types/component-attributes';
+import type { CreateCustomerProps } from '../types/component-props';
 
-const DwollaCustomerCreate: FC<CreateCustomerAttributes<any>> = (props) => {
+const DwollaCustomerCreate: FC<CreateCustomerProps> = (props) => {
   return <dwolla-customer-create {...props} />;
 };
 

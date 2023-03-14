@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { DocumentUploadAttributes } from '../@types/component-attributes';
+import type { DocumentUploadProps } from '../types/component-props';
 
-const DwollaDocumentUpload: FC<DocumentUploadAttributes<any>> = (props) => {
+const DwollaDocumentUpload: FC<DocumentUploadProps> = (props) => {
   return <dwolla-document-upload {...props} />;
 };
 

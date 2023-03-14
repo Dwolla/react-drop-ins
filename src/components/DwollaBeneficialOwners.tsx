@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { BeneficialOwnersAttributes } from '../@types/component-attributes';
+import type { BeneficialOwnersProps } from '../types/component-props';
 
-const DwollaBeneficialOwners: FC<BeneficialOwnersAttributes<any>> = (props) => {
+const DwollaBeneficialOwners: FC<BeneficialOwnersProps> = (props) => {
   return <dwolla-beneficial-owners {...props} />;
 };
 

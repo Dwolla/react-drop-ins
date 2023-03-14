@@ -1,9 +1,9 @@
 // Description: Example showing usage of the DwollaCustomerCreate component
 
 // Import the useDwollaWeb hook and the DwollaCustomerCreate component
-
-// @ts-ignore
-import { DwollaCustomerCreate, DwollaWebOptions, useDwollaWeb } from 'react-drop-ins';
+import type { DwollaWebOptions } from '../useDwollaWeb';
+import { useDwollaWeb } from '../useDwollaWeb';
+import DwollaCustomerCreate from '../components/DwollaCustomerCreate';
 
 // Create a functional component
 const DwollaCustomerCreateExample = () => {
