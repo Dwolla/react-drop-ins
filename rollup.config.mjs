@@ -4,7 +4,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from 'rollup-plugin-ts';
 import external from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 
 const BUNDLE_DIR = 'bundle';
@@ -28,7 +27,6 @@ export default {
     external(),
     nodeResolve(),
     commonjs(),
-    postcss(),
     typescript({ tsconfig: './tsconfig.json' }),
     terser(),
     copy({
