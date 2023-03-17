@@ -39,7 +39,7 @@ _The full list of configuration options for the hook can be found in the [table]
 
 ```typescript
 // Import the useDwollaWeb hook and the DwollaCustomerCreate component
-import { DwollaCustomerCreate, DwollaWebOptions, useDwollaWeb } from 'react-drop-ins';
+import { DwollaCustomerCreate, DwollaWebOptions, useDwollaWeb } from '@dwolla/react-drop-ins';
 
 // Create configuration for the useDwollaWeb hook
 const config: DwollaWebOptions = {
