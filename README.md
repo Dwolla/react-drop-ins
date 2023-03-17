@@ -1,6 +1,4 @@
-# react-drop-ins [![npm version](https://badge.fury.io/js/react-drop-ins.svg)](http://badge.fury.io/js/react-drop-ins)
-
-<!-- TODO: Generate links once published to NPM -->
+# react-drop-ins 
 
 React bindings for Dwolla's [drop-in components](https://developers.dwolla.com/concepts/drop-in-components). This library provides a React hook for importing the `dwolla-web.js` library and a set of React components for using the drop-in components.
 
@@ -94,8 +92,6 @@ export default App;
 An example React component demonstrating how to use the library and the `DwollaCustomerCreate` component can be found in the [examples](https://github.com/Dwolla/react-drop-ins/tree/main/src/examples) directory.
 
 For a full list of all available components and their usage, check out the [Storybook](https://dwolla.github.io/react-drop-ins/). Switch to the `Docs` tab and click on `Show code` to see the implementation code example for each component.
-
-<!-- TODO: Add storybook url once hosted -->
 
 ## Changelog
 
