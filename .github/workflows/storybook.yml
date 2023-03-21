@@ -1,0 +1,60 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - main # Only trigger the action when the following paths are updated on main. With branch protection rules in place, it only triggers when a PR including changes to the following paths is merged.
+    paths: [
+        'src/stories/**',
+        'src/components/**',
+        '.github/workflows/storybook.yml',
+      ] # Trigger the action when these files are updated
+
+  # Allows runing this workflow manually from the Actions tab on GitHub
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 7
+
+      - name: Get pnpm Store Directory
+        id: pnpm-cache
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Setup pnpm Cache
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build Storybook
+        run: | # Build the Storybook files
+          pnpm build-storybook
+
+      - name: Deploy Storybook
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: storybook-static # The folder that the build-storybook script generates files.
+          CLEAN: true # Automatically remove deleted files from the deploy. branch
