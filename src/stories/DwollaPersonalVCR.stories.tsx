@@ -21,9 +21,8 @@ export default {
 };
 
 export const Default = () => {
-  // import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
-  // import DwollaPersonalVCR from '../components/DwollaPersonalVCR';
-  // TODO: Update imports after publishing to NPM
+  // import type { DwollaWebOptions } from '@dwolla/react-drop-ins';
+  // import { useDwollaWeb, DwollaPersonalVCR } from '@dwolla/react-drop-ins';
 
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {

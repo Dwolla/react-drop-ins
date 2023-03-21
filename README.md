@@ -1,12 +1,13 @@
-# react-drop-ins 
+# react-drop-ins [![npm version](https://badge.fury.io/js/@dwolla%2Freact-drop-ins.svg)](https://badge.fury.io/js/@dwolla%2Freact-drop-ins)
 
 React bindings for Dwolla's [drop-in components](https://developers.dwolla.com/concepts/drop-in-components). This library provides a React hook for importing the `dwolla-web.js` library and a set of React components for using the drop-in components.
 
 ## Table of Contents
 
 * [Installation](#installation)
-* [Usage](#usage)
 * [Examples](#examples)
+  * [Storybook](#storybook)
+* [Usage](#usage)
 * [Changelog](#changelog)
 * [Community](#community)
 * [Additional Resources](#additional-resources)
@@ -15,7 +16,7 @@ React bindings for Dwolla's [drop-in components](https://developers.dwolla.com/c
 
 ```shell
 # using npm
-$ npm install --save @dwolla/react-drop-ins
+$ npm i @dwolla/react-drop-ins
 
 # using yarn
 $ yarn add @dwolla/react-drop-ins
@@ -23,6 +24,13 @@ $ yarn add @dwolla/react-drop-ins
 # using pnpm
 $ pnpm add @dwolla/react-drop-ins
 ```
+
+## Examples
+
+An example React component demonstrating how to use the library and the `DwollaCustomerCreate` component can be found in the [examples](https://github.com/Dwolla/react-drop-ins/tree/main/src/examples) directory.
+
+### [Storybook](https://dwolla.github.io/react-drop-ins/)
+View a live demo of all components. Switch to the `Docs` tab and click on `Show code` to see the implementation code for each component.
 
 ## Usage
 
@@ -88,15 +96,9 @@ export default App;
 
 **Note:** You can use either `token` or `tokenUrl` in the config options for generating a client token, but not both. Check out the [tokenUrl vs token configuration](https://developers.dwolla.com/guides/drop-ins/generate-client-token#token-url-vs-token-configuration) section in the docs for more information on the differences between the two.
 
-## Examples
-
-An example React component demonstrating how to use the library and the `DwollaCustomerCreate` component can be found in the [examples](https://github.com/Dwolla/react-drop-ins/tree/main/src/examples) directory.
-
-For a full list of all available components and their usage, check out the [Storybook](https://dwolla.github.io/react-drop-ins/). Switch to the `Docs` tab and click on `Show code` to see the implementation code example for each component.
-
 ## Changelog
 
-- **1.0.0** Initial release of React bindings for Dwolla's drop-in components.
+- **1.0.1** Initial release of React bindings for Dwolla's drop-in components.
 
 ## Community
 * If you have any feedback, please reach out to us on [our forums](https://discuss.dwolla.com/) or by [creating a GitHub issue](https://github.com/Dwolla/react-drop-ins/issues).

@@ -43,9 +43,8 @@ export default {
 };
 
 export const Default = () => {
-  // import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
-  // import DwollaDocumentUpload from '../components/DwollaDocumentUpload';
-  // TODO: Update imports after publishing to NPM
+  // import type { DwollaWebOptions } from '@dwolla/react-drop-ins';
+  // import { useDwollaWeb, DwollaDocumentUpload } from '@dwolla/react-drop-ins';
 
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {
