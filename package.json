@@ -1,5 +1,5 @@
 {
-  "name": "react-drop-ins",
+  "name": "@dwolla/react-drop-ins",
   "version": "1.0.0",
   "description": "React bindings for Dwolla's drop-in components",
   "repository": {
