@@ -1,5 +1,5 @@
 {
-  "name": "react-drop-ins",
+  "name": "@dwolla/react-drop-ins",
   "version": "1.0.0",
   "description": "React bindings for Dwolla's drop-in components",
   "repository": {
@@ -14,9 +14,12 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/Dwolla/react-drop-ins",
-  "main": "index.js",
-  "module": "index.mjs",
-  "types": "index.d.ts",
+  "main": "bundle/index.js",
+  "module": "bundle/index.mjs",
+  "types": "bundle/index.d.ts",
+  "files": [
+    "bundle"
+  ],
   "scripts": {
     "_eslint": "eslint \"src/**/*.{ts,tsx}\" \"*.mjs\"",
     "_prettier": "prettier *.md \"src/**/*.{ts,tsx}\" \"*.mjs\"",
@@ -78,7 +81,6 @@
     "react-test-renderer": "^18.2.0",
     "rimraf": "^4.1.2",
     "rollup": "^3.14.0",
-    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-ts": "^3.2.0",
     "storybook-addon-mock": "^3.2.0",
