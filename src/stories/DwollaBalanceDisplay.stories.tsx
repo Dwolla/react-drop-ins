@@ -41,9 +41,8 @@ export default {
 };
 
 export const Default = () => {
-  // import { DwollaWebOptions, useDwollaWeb } from '../useDwollaWeb';
-  // import DwollaBalanceDisplay from '../components/DwollaBalanceDisplay';
-  // TODO: Update imports after publishing to NPM
+  // import type { DwollaWebOptions } from '@dwolla/react-drop-ins';
+  // import { useDwollaWeb, DwollaBalanceDisplay } from '@dwolla/react-drop-ins';
 
   // Create configuration for the useDwollaWeb hook
   const config: DwollaWebOptions = {

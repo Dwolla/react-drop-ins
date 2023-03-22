@@ -1,6 +1,6 @@
 {
   "name": "@dwolla/react-drop-ins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React bindings for Dwolla's drop-in components",
   "repository": {
     "type": "git",
