@@ -5,6 +5,7 @@ import DwollaClientCreate from './DwollaClientCreate';
 import DwollaCustomerCreate from './DwollaCustomerCreate';
 import DwollaCustomerUpgrade from './DwollaCustomerUpgrade';
 import DwollaDocumentUpload from './DwollaDocumentUpload';
+import DwollaFundingSourceCreate from './DwollaFundingSourceCreate';
 import DwollaPayIn from './DwollaPayIn';
 import DwollaPersonalVCR from './DwollaPersonalVCR';
 
@@ -16,6 +17,7 @@ export {
   DwollaCustomerCreate,
   DwollaCustomerUpgrade,
   DwollaDocumentUpload,
+  DwollaFundingSourceCreate,
   DwollaPayIn,
   DwollaPersonalVCR
 };

@@ -5,6 +5,7 @@ export interface CommonOptions {
   error: <TError = unknown>(err: TError) => MaybePromise<void>;
   styles?: string;
   success: <TResponse = unknown>(event: SuccessEvent<TResponse>) => MaybePromise<void>;
+  userAgent?: string;
 }
 
 export interface Dwolla {

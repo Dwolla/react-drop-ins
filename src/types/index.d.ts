@@ -4,6 +4,7 @@ import type {
   BusinessVCRProps,
   ClientAccountOpeningProps,
   CreateCustomerProps,
+  CreateFundingSourceProps,
   DocumentUploadProps,
   PayInProps,
   PersonalVCRProps,
@@ -19,6 +20,7 @@ declare global {
       'dwolla-account-opening': ClientAccountOpeningProps;
       'dwolla-customer-create': CreateCustomerProps;
       'dwolla-document-upload': DocumentUploadProps;
+      'dwolla-funding-source-create': CreateFundingSourceProps;
       'dwolla-payin': PayInProps;
       'dwolla-personal-vcr': PersonalVCRProps;
       'dwolla-customer-update': UpdateCustomerProps;

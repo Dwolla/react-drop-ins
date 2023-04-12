@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import typescript from 'rollup-plugin-ts';
 import external from 'rollup-plugin-peer-deps-external';
+import json from '@rollup/plugin-json';
 
 export default {
   input: './src/index.ts',
@@ -24,6 +25,7 @@ export default {
     nodeResolve(),
     commonjs(),
     typescript({ tsconfig: './tsconfig.json' }),
-    terser()
+    json(),
+    terser(),
   ]
 };

@@ -30,6 +30,10 @@ export interface CreateCustomerProps
   type?: 'receive-only';
 }
 
+export interface CreateFundingSourceProps extends WithCustomer {
+  initiateMicroDeposits?: boolean;
+}
+
 export type DocumentUploadProps = WithCustomer;
 
 export interface PayInProps extends WithCustomer {
