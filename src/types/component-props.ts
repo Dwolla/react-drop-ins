@@ -54,6 +54,10 @@ export type UpdateCustomerProps = WithCorrelation &
   WithPersonalInformation &
   WithPrivacyAndTerms;
 
+export interface VerifyMicroDepositsProps extends WithCustomer {
+  fundingSourceId: string;
+}
+
 interface WithCorrelation {
   correlationId?: string;
 }

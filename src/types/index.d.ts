@@ -8,7 +8,8 @@ import type {
   DocumentUploadProps,
   PayInProps,
   PersonalVCRProps,
-  UpdateCustomerProps
+  UpdateCustomerProps,
+  VerifyMicroDepositsProps
 } from './component-props';
 
 declare global {
@@ -24,6 +25,7 @@ declare global {
       'dwolla-payin': PayInProps;
       'dwolla-personal-vcr': PersonalVCRProps;
       'dwolla-customer-update': UpdateCustomerProps;
+      'dwolla-micro-deposits-verify': VerifyMicroDepositsProps;
     }
   }
 }
