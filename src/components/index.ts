@@ -6,9 +6,9 @@ import DwollaCustomerCreate from './DwollaCustomerCreate';
 import DwollaCustomerUpgrade from './DwollaCustomerUpgrade';
 import DwollaDocumentUpload from './DwollaDocumentUpload';
 import DwollaFundingSourceCreate from './DwollaFundingSourceCreate';
+import DwollaMicroDepositsVerify from './DwollaMicroDepositsVerify';
 import DwollaPayIn from './DwollaPayIn';
 import DwollaPersonalVCR from './DwollaPersonalVCR';
-import DwollaVerifyMicroDeposits from './DwollaVerifyMicroDeposits';
 
 export {
   DwollaBalanceDisplay,
@@ -19,7 +19,7 @@ export {
   DwollaCustomerUpgrade,
   DwollaDocumentUpload,
   DwollaFundingSourceCreate,
+  DwollaMicroDepositsVerify,
   DwollaPayIn,
-  DwollaPersonalVCR,
-  DwollaVerifyMicroDeposits
+  DwollaPersonalVCR
 };
