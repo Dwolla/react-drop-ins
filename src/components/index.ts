@@ -9,7 +9,6 @@ import DwollaFundingSourceCreate from './DwollaFundingSourceCreate';
 import DwollaMicroDepositsVerify from './DwollaMicroDepositsVerify';
 import DwollaPayIn from './DwollaPayIn';
 import DwollaPersonalVCR from './DwollaPersonalVCR';
-import DwollaVerifyMicroDeposits from './DwollaVerifyMicroDeposits';
 
 export {
   DwollaBalanceDisplay,
@@ -22,6 +21,5 @@ export {
   DwollaFundingSourceCreate,
   DwollaMicroDepositsVerify,
   DwollaPayIn,
-  DwollaPersonalVCR,
-  DwollaVerifyMicroDeposits
+  DwollaPersonalVCR
 };
