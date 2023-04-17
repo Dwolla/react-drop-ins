@@ -3,6 +3,7 @@ import useScript from 'react-script-hook';
 import { DWOLLA_WEB_STABLE_URL as URL } from './constants';
 import type { CommonOptions, OptionsWithToken, OptionsWithTokenUrl } from './types/dwolla-js';
 import type { Rename } from './types/utils';
+import { version } from '../package.json';
 
 /*
 Pick all properties from CommonOptions except 'error' and 'success'.
@@ -45,7 +46,8 @@ export const useDwollaWeb = (options: DwollaWebOptions) => {
     window.dwolla.configure({
       ...options,
       error: options.onError,
-      success: options.onSuccess
+      success: options.onSuccess,
+      userAgent: `react-drop-ins/${version}`
     });
 
     setDwollaLoaded(true);

@@ -30,6 +30,10 @@ export interface CreateCustomerProps
   type?: 'receive-only';
 }
 
+export interface CreateFundingSourceProps extends WithCustomer {
+  initiateMicroDeposits?: boolean;
+}
+
 export type DocumentUploadProps = WithCustomer;
 
 export interface PayInProps extends WithCustomer {
@@ -49,6 +53,10 @@ export type UpdateCustomerProps = WithCorrelation &
   WithCustomer &
   WithPersonalInformation &
   WithPrivacyAndTerms;
+
+export interface VerifyMicroDepositsProps extends WithCustomer {
+  fundingSourceId: string;
+}
 
 interface WithCorrelation {
   correlationId?: string;

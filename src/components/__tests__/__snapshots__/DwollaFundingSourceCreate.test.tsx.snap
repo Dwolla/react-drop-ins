@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DwollaFundingSourceCreate should render component with micro-deposit initiation 1`] = `
+<dwolla-funding-source-create
+  customerId="123"
+  initiateMicroDeposits={true}
+/>
+`;
+
+exports[`DwollaFundingSourceCreate should render component without micro-deposit initiation 1`] = `
+<dwolla-funding-source-create
+  customerId="123"
+/>
+`;
