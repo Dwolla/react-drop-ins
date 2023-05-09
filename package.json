@@ -1,6 +1,6 @@
 {
   "name": "@dwolla/react-drop-ins",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "React bindings for Dwolla's drop-in components",
   "repository": {
     "type": "git",
@@ -39,8 +39,8 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
