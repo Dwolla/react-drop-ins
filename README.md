@@ -98,7 +98,7 @@ export default App;
 
 ## Changelog
 
-- **[1.1.0](https://github.com/Dwolla/react-drop-ins/releases/tag/v1.1.0)** Updated Dwolla Web to v2.2.0, and added implementations for Create Funding Source & Verify Micro Deposits drop-in components. See GitHub Releases for more information.
+- **[1.1.0](https://github.com/Dwolla/react-drop-ins/releases/tag/v1.1.0)** Updated Dwolla Web to v2.2.0, and added new component implementations. See GitHub Releases for more information.
 - **1.0.1** Initial release of React bindings for Dwolla's drop-in components.
 
 ## Community
