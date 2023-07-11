@@ -28,7 +28,7 @@ export default {
               {
                 _embedded: {
                   balance: {
-                    balance: { value: '100.00', currency: 'USD' }
+                    balance: { value: '2134.00', currency: 'USD' }
                   }
                 }
               }
