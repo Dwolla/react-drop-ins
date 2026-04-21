@@ -1,14 +1,14 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaBusinessVCR from '../DwollaBusinessVCR';
 
 test('DwollaBusinessVCR', () => {
-  const tree = TestRenderer.create(<DwollaBusinessVCR />).toJSON();
+  const { asFragment } = render(<DwollaBusinessVCR />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('with optional props', () => {
-  const tree = TestRenderer.create(
+  const { asFragment } = render(
     <DwollaBusinessVCR
       correlationId="123abc"
       email="janedoe@email.com"
@@ -20,7 +20,7 @@ test('with optional props', () => {
       terms="www.yourterms.com"
       customerId="123"
     />
-  ).toJSON();
+  );
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

@@ -51,7 +51,13 @@ export const Default = () => {
   // Render the DwollaCustomerCreate component when ready
   return (
     <div style={{ width: '470px' }}>
-      <DwollaCustomerCreate firstName="John" lastName="Doe" type="receive-only" />
+      <DwollaCustomerCreate
+        firstName="John"
+        lastName="Doe"
+        type="receive-only"
+        privacy="https://www.yourcompany.com/privacy"
+        terms="https://www.yourcompany.com/terms"
+      />
     </div>
   );
 };

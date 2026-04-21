@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DwollaMicroDepositsVerify should render the component 1`] = `
-<dwolla-micro-deposits-verify
-  customerId="123"
-  fundingSourceId="456"
-/>
+<DocumentFragment>
+  <dwolla-micro-deposits-verify
+    customerid="123"
+    fundingsourceid="456"
+  />
+</DocumentFragment>
 `;

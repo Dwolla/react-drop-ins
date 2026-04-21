@@ -12,7 +12,7 @@ import type {
   VerifyMicroDepositsProps
 } from './component-props';
 
-declare global {
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
       'dwolla-balance-display': BalanceDisplayProps;

@@ -1,16 +1,14 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaBalanceDisplay from '../DwollaBalanceDisplay';
 
 test('DwollaBalanceDisplay', () => {
-  const tree = TestRenderer.create(<DwollaBalanceDisplay customerId="123" />).toJSON();
+  const { asFragment } = render(<DwollaBalanceDisplay customerId="123" />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('with optional props', () => {
-  const tree = TestRenderer.create(
-    <DwollaBalanceDisplay customerId="123" hideZeroBalance />
-  ).toJSON();
+  const { asFragment } = render(<DwollaBalanceDisplay customerId="123" hideZeroBalance />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

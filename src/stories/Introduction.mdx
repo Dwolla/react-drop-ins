@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from '@storybook/blocks';
 import Code from './assets/code-samples-nav-icon.svg';
 import Documentation from './assets/api-reference-nav-icon.svg';
 import Guide from './assets/guides-nav-icon.svg';
@@ -116,13 +116,11 @@ React hook and components for integrating with Dwolla's drop-in components avail
 Browse all supported drop-in components in the sidebar. View their required and optional props in the `Controls` tab.
 
 <div className="tip-wrapper">
-  <span className="tip">Tip</span>View code example for each drop-in component - Select
-  <strong>
-    <code>Docs</code>
-  </strong> and click
-  <strong>
-    <code>Show code</code>
-  </strong>
+  <span className="tip">Tip</span>
+  {'View code example for each drop-in component - Select '}
+  <strong><code>Docs</code></strong>
+  {' and click '}
+  <strong><code>Show code</code></strong>
 </div>
 
 <div className="subheading">Related resources</div>
@@ -137,7 +135,7 @@ Browse all supported drop-in components in the sidebar. View their required and 
   </a>
   <a
     className="link-item"
-    href="https://developers.dwolla.com/concepts/drop-in-components"
+    href="https://developers.dwolla.com/docs/drop-in-components"
     target="_blank">
     <img src={Documentation} alt="Documentation" />
     <span>
@@ -145,7 +143,7 @@ Browse all supported drop-in components in the sidebar. View their required and 
       Official Dwolla documentation on drop-in components
     </span>
   </a>
-  <a className="link-item" href="https://developers.dwolla.com/guides/drop-ins" target="_blank">
+  <a className="link-item" href="https://developers.dwolla.com/docs/drop-in-components/building-with-drop-ins" target="_blank">
     <img src={Guide} alt="Guide" />
     <span>
       <strong>Guide</strong>

@@ -1,8 +1,8 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaBeneficialOwners from '../DwollaBeneficialOwners';
 
 test('DwollaBeneficialOwners', () => {
-  const tree = TestRenderer.create(<DwollaBeneficialOwners customerId="123" />).toJSON();
+  const { asFragment } = render(<DwollaBeneficialOwners customerId="123" />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

@@ -1,7 +1,5 @@
 export interface ClientAccountOpeningProps
-  extends WithCorrelation,
-    WithPersonalInformation,
-    WithPrivacyAndTerms {
+  extends WithCorrelation, WithPersonalInformation, WithPrivacyAndTerms {
   clientAccountId?: string;
   hideDBAField?: boolean;
   website?: string;
@@ -14,21 +12,27 @@ export interface BalanceDisplayProps extends WithCustomer {
 export type BeneficialOwnersProps = WithCustomer;
 
 export interface BusinessVCRProps
-  extends WithCorrelation,
-    WithPersonalInformation,
-    WithPrivacyAndTerms {
+  extends WithCorrelation, WithPersonalInformation, WithPrivacyAndTerms {
   customerId?: string;
   hideDBAField?: boolean;
 }
 
-export interface CreateCustomerProps
-  extends WithCorrelation,
-    WithPersonalInformation,
-    WithPrivacyAndTerms {
+export interface CreateCustomerStandardProps
+  extends WithCorrelation, WithPersonalInformation, WithPrivacyAndTerms {
   businessName?: string;
   isBusiness?: boolean;
-  type?: 'receive-only';
+  type?: never;
 }
+
+export interface CreateCustomerReceiveOnlyProps extends WithCorrelation, WithPersonalInformation {
+  businessName?: string;
+  isBusiness?: boolean;
+  type: 'receive-only';
+  privacy: string;
+  terms: string;
+}
+
+export type CreateCustomerProps = CreateCustomerStandardProps | CreateCustomerReceiveOnlyProps;
 
 export interface CreateFundingSourceProps extends WithCustomer {
   initiateMicroDeposits?: boolean;
@@ -43,9 +47,7 @@ export interface PayInProps extends WithCustomer {
 }
 
 export interface PersonalVCRProps
-  extends WithCorrelation,
-    WithPersonalInformation,
-    WithPrivacyAndTerms {
+  extends WithCorrelation, WithPersonalInformation, WithPrivacyAndTerms {
   customerId?: string;
 }
 
@@ -58,22 +60,22 @@ export interface VerifyMicroDepositsProps extends WithCustomer {
   fundingSourceId: string;
 }
 
-interface WithCorrelation {
+export interface WithCorrelation {
   correlationId?: string;
 }
 
-interface WithCustomer {
+export interface WithCustomer {
   customerId: string;
 }
 
-interface WithPersonalInformation {
+export interface WithPersonalInformation {
   email?: string;
   firstName?: string;
   ipAddress?: string;
   lastName?: string;
 }
 
-interface WithPrivacyAndTerms {
+export interface WithPrivacyAndTerms {
   privacy?: string;
   terms?: string;
 }

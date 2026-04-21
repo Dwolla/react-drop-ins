@@ -1,5 +1,6 @@
 {
   "testEnvironment": "jest-environment-jsdom",
+  "testPathIgnorePatterns": ["/node_modules/", "/bundle/"],
   "transform": {
     "^.+\\.tsx?": "ts-jest"
   }
