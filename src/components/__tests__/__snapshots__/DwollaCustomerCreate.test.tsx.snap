@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DwollaCustomerCreate 1`] = `<dwolla-customer-create />`;
+exports[`DwollaCustomerCreate 1`] = `
+<DocumentFragment>
+  <dwolla-customer-create />
+</DocumentFragment>
+`;
 
 exports[`with optional props 1`] = `
-<dwolla-customer-create
-  businessName="Jane Doe, LLC"
-  correlationId="123abc"
-  email="janedoe@email.com"
-  firstName="Jane"
-  ipAddress="255.255.255.255"
-  isBusiness={true}
-  lastName="Doe"
-  privacy="www.yourprivacy.com"
-  terms="www.yourterms.com"
-  type="receive-only"
-/>
+<DocumentFragment>
+  <dwolla-customer-create
+    businessname="Jane Doe, LLC"
+    correlationid="123abc"
+    email="janedoe@email.com"
+    firstname="Jane"
+    ipaddress="255.255.255.255"
+    isbusiness=""
+    lastname="Doe"
+    privacy="www.yourprivacy.com"
+    terms="www.yourterms.com"
+    type="receive-only"
+  />
+</DocumentFragment>
 `;

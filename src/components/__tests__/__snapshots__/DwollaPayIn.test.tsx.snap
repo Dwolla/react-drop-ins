@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DwollaPayIn 1`] = `
-<dwolla-payin
-  blob=""
-  customerId="123"
-  token=""
-/>
+<DocumentFragment>
+  <dwolla-payin
+    blob=""
+    customerid="123"
+    token=""
+  />
+</DocumentFragment>
 `;
 
 exports[`with optional props 1`] = `
-<dwolla-payin
-  amount={10}
-  blob=""
-  customerId="123"
-  token=""
-/>
+<DocumentFragment>
+  <dwolla-payin
+    amount="10"
+    blob=""
+    customerid="123"
+    token=""
+  />
+</DocumentFragment>
 `;

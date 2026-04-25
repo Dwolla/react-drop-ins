@@ -98,6 +98,7 @@ export default App;
 
 ## Changelog
 
+- **1.2.0** Updated Dwolla Web to v3.0.0. **Breaking:** `<DwollaCustomerCreate>` with `type="receive-only"` now requires `privacy` and `terms` props (URLs to your Terms of Service and Privacy Policy).
 - **[1.1.0](https://github.com/Dwolla/react-drop-ins/releases/tag/v1.1.0)** Updated Dwolla Web to v2.2.0, and added new component implementations. See GitHub Releases for more information.
 - **1.0.1** Initial release of React bindings for Dwolla's drop-in components.
 

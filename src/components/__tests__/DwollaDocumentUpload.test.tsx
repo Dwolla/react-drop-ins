@@ -1,8 +1,8 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaDocumentUpload from '../DwollaDocumentUpload';
 
 test('DwollaDocumentUpload', () => {
-  const tree = TestRenderer.create(<DwollaDocumentUpload customerId="123" />).toJSON();
+  const { asFragment } = render(<DwollaDocumentUpload customerId="123" />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

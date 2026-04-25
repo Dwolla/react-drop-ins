@@ -1,14 +1,14 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaClientCreate from '../DwollaClientCreate';
 
 test('DwollaClientCreate', () => {
-  const tree = TestRenderer.create(<DwollaClientCreate />).toJSON();
+  const { asFragment } = render(<DwollaClientCreate />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('with optional props', () => {
-  const tree = TestRenderer.create(
+  const { asFragment } = render(
     <DwollaClientCreate
       clientAccountId="123"
       correlationId="123abc"
@@ -21,7 +21,7 @@ test('with optional props', () => {
       terms="www.yourterms.com"
       website="www.yourwebsite.com"
     />
-  ).toJSON();
+  );
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

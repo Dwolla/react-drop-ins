@@ -1,14 +1,14 @@
-import TestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DwollaCustomerUpgrade from '../DwollaCustomerUpgrade';
 
 test('DwollaCustomerUpdate', () => {
-  const tree = TestRenderer.create(<DwollaCustomerUpgrade customerId="123" />).toJSON();
+  const { asFragment } = render(<DwollaCustomerUpgrade customerId="123" />);
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('with optional props', () => {
-  const tree = TestRenderer.create(
+  const { asFragment } = render(
     <DwollaCustomerUpgrade
       customerId="123"
       correlationId="123abc"
@@ -19,7 +19,7 @@ test('with optional props', () => {
       privacy="www.yourprivacy.com"
       terms="www.yourterms.com"
     />
-  ).toJSON();
+  );
 
-  expect(tree).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

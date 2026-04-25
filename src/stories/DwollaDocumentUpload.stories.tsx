@@ -71,5 +71,9 @@ export const Default = () => {
   if (error) return <div>Error</div>;
 
   // Render the DwollaDocumentUpload component when ready
-  return <DwollaDocumentUpload customerId={CUSTOMER_ID} />;
+  return (
+    <div style={{ width: 470 }}>
+      <DwollaDocumentUpload customerId={CUSTOMER_ID} />
+    </div>
+  );
 };

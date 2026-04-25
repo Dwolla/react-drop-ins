@@ -1,16 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DwollaPersonalVCR 1`] = `<dwolla-personal-vcr />`;
+exports[`DwollaPersonalVCR 1`] = `
+<DocumentFragment>
+  <dwolla-personal-vcr />
+</DocumentFragment>
+`;
 
 exports[`with optional props 1`] = `
-<dwolla-personal-vcr
-  correlationId="123abc"
-  customerId="123"
-  email="janedoe@email.com"
-  firstName="Jane"
-  ipAddress="255.255.255.255"
-  lastName="Doe"
-  privacy="www.yourprivacy.com"
-  terms="www.yourterms.com"
-/>
+<DocumentFragment>
+  <dwolla-personal-vcr
+    correlationid="123abc"
+    customerid="123"
+    email="janedoe@email.com"
+    firstname="Jane"
+    ipaddress="255.255.255.255"
+    lastname="Doe"
+    privacy="www.yourprivacy.com"
+    terms="www.yourterms.com"
+  />
+</DocumentFragment>
 `;
